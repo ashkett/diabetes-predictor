@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="\static\css\style.css">
+</head>
+
+<body>
+    <div class="background-image">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Diabetes Predictor</a>
+        <button id="predictButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="output"></div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center w-full">
+            <div class="col-lg-8 col-md-10">
+                <div class="card card-transparent shadow custom-card">
+                    <div class="card-body ">
+                        <h1 class="card-title text-center text-primary mb-5">Diabetes Prediction Model</h1>
+                        <form id="prediction-form" method="POST" action="run_model">
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group text-center text-center">
+                                        <label for="age" class="font-weight-bold">Age</label>
+                                        <input type="number" class="form-control" id="age" name="age" required>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="gender"  class="font-weight-bold">Gender (Enter 1 for male, 0 for female)</label>
+                                        <input type="number" class="form-control" id="gender" name="gender" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="Hypertension"  class="font-weight-bold">Hypertension (Enter 1 if Yes, 0 if No)</label>
+                                        <input type="number" class="form-control" id="Hypertension" name="hypertension"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="bmi"  class="font-weight-bold">BMI</label>
+                                        <input type="text" class="form-control" id="bmi" name="bmi" required>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="heart_disease"  class="font-weight-bold">Heart Disease (Enter 1 if Yes, 0 if No)</label>
+                                        <input type="number" class="form-control" id="heart_disease"
+                                            name="heart_disease" required>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="smoking_history"  class="font-weight-bold">Smoking History (Enter 1 if Yes, 0 if No)</label>
+                                        <input type="number" class="form-control" id="smoking_history"
+                                            name="smoking_history" required>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="HbA1c_level"  class="font-weight-bold">HbA1c levels</label>
+                                        <input type="text" class="form-control" id="HbA1c_level" name="HbA1c_level"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="blood_glucose_level"  class="font-weight-bold">Blood Glucose Level</label>
+                                        <input type="number" class="form-control" id="blood_glucose_level"
+                                            name="blood_glucose_level" required>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <button type="submit" class="btn btn-primary btn-block" id="predictButton">Predict</button>
+
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer class="footer mt-5 py-3 bg-dark">
+        <div class="container text-center text-white">
+            <span>&copy; 2024 Diabetes Prediction. All rights reserved.</span>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="\static\js\script.js"></script>
+
+</body>
+
+</html>
