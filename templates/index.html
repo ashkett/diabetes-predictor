@@ -50,8 +50,11 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-group text-center">
-                                        <label for="gender"  class="font-weight-bold">Gender (Enter 1 for male, 0 for female)</label>
-                                        <input type="number" class="form-control" id="gender" name="gender" required>
+                                        <label for="gender"  class="font-weight-bold">Gender</label>
+                                        <select id="gender" name="gender" class="form-control" required>
+                                            <option value="F">Female</option>
+                                            <option value="M">Male</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -59,43 +62,64 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group text-center">
-                                        <label for="Hypertension"  class="font-weight-bold">Hypertension (Enter 1 if Yes, 0 if No)</label>
-                                        <input type="number" class="form-control" id="Hypertension" name="hypertension"
-                                            required>
+                                        <label for="height"  class="font-weight-bold">Height</label>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group text-center">
+                                                    <input type="text" class="form-control" id="feet" name="feet" placeholder="feet" required>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group text-center">
+                                                    <input type="text" class="form-control" id="inches" name="inches" placeholder="inches" required>
+                                                </div>
+                                            </div>
+                                        </div>                                        
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-group text-center">
-                                        <label for="bmi"  class="font-weight-bold">BMI</label>
-                                        <input type="text" class="form-control" id="bmi" name="bmi" required>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-group text-center">
-                                        <label for="heart_disease"  class="font-weight-bold">Heart Disease (Enter 1 if Yes, 0 if No)</label>
-                                        <input type="number" class="form-control" id="heart_disease"
-                                            name="heart_disease" required>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-group text-center">
-                                        <label for="smoking_history"  class="font-weight-bold">Smoking History (Enter 1 if Yes, 0 if No)</label>
-                                        <input type="number" class="form-control" id="smoking_history"
-                                            name="smoking_history" required>
+                                        <label for="weight"  class="font-weight-bold">Weight</label>
+                                        <input type="text" class="form-control" id="weight" placeholder="kg" name="weight" required>
                                     </div>
                                 </div>
                             </div>
 
-
-
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group text-center">
-                                        <label for="HbA1c_level"  class="font-weight-bold">HbA1c levels</label>
+                                        <label for="Hypertension"  class="font-weight-bold">Hypertension</label>
+                                        <select id="hypertension" name="hypertension" class="form-control" required>
+                                            <option value="N">No</option>
+                                            <option value="Y">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="heart_disease"  class="font-weight-bold">Heart Disease</label>
+                                        <select id="heart_disease" name="heart_disease" class="form-control" required>
+                                            <option value="N">No</option>
+                                            <option value="Y">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="smoking_history"  class="font-weight-bold">Smoking History</label>
+                                        <select id="smoking_history" name="smoking_history" class="form-control" required>
+                                            <option value="N">No</option>
+                                            <option value="Y">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group text-center">
+                                        <label for="HbA1c_level"  class="font-weight-bold">HbA1c Level</label>
                                         <input type="text" class="form-control" id="HbA1c_level" name="HbA1c_level"
                                             required>
                                     </div>
@@ -109,11 +133,8 @@
                                 </div>
                             </div>
 
-
-
+                            <br>
                             <button type="submit" class="btn btn-primary btn-block" id="predictButton">Predict</button>
-
-
 
                         </form>
 

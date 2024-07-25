@@ -14,18 +14,28 @@ with open('model.pkl', 'rb') as f:
 def index():
     return render_template('index.html')
 
-@app.route('/run_model', methods=['POST'])
+@app.route('/run_model', methods=['GET', 'POST'])
 def run_model():
     if request.method == 'POST':
         # Extract the data from the form
-        gender = float(request.form['gender'])
+        gender = str(request.form.get('gender'))
         age = float(request.form['age'])
-        hypertension = float(request.form['hypertension'])
-        heart_disease = float(request.form['heart_disease'])
-        smoking_history = float(request.form['smoking_history'])
-        bmi = float(request.form['bmi'])
+        hypertension = str(request.form.get('hypertension'))
+        heart_disease = str(request.form.get('heart_disease'))
+        smoking_history = str(request.form.get('smoking_history'))
+        feet = float(request.form['feet'])
+        inches = float(request.form['inches'])
+        weight = float(request.form['weight'])
         HbA1c_level = float(request.form['HbA1c_level'])
         blood_glucose_level = float(request.form['blood_glucose_level'])
+
+        #calculations
+        gender = 1 if gender == 'M' else 0
+        hypertension = 1 if hypertension == 'Y' else 0
+        heart_disease = 1 if heart_disease == 'Y' else 0
+        smoking_history = 1 if smoking_history == 'Y' else 0
+        height = (feet/3.281) + (inches/39.37)
+        bmi = weight / (height**2)
         
         # Create the data list
         data = [gender, age, hypertension, heart_disease, smoking_history, bmi, HbA1c_level, blood_glucose_level]

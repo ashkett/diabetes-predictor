@@ -63,7 +63,7 @@
 
 /* Container for background image */
 .background-image {
-    background-image: url('/static/img/bk.jpg'); /* Replace with your image path */
+    background-image: url('/static/img/diabetes.jpg'); /* Replace with your image path */
     background-size: cover; /* Makes sure the image covers the entire container */
    
 }
