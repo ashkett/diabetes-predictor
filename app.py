@@ -52,7 +52,8 @@ def run_model():
         result = "Diabetic" if y_pred[0] == 1 else "Non-diabetic"
         
         # Render the result on the same page
-        return render_template('result.html', prediction=result)
+        image_path = 'img/diabetes_hist_plot.png'
+        return render_template('result.html', prediction=result, image_path=image_path)
 
 if __name__ == '__main__':
     app.run(debug=True)

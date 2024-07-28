@@ -29,14 +29,17 @@
         </div>
     </nav>
     
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8 col-sm-10">
                 <div class="card shadow-lg">
                     <div class="card-body">
                         <h1 class="card-title text-center">Prediction Result</h1>
                         <p class="text-center lead">The model's prediction is:</p>
-                        <h2 class="text-center text-primary">{{ prediction }}</h2>
+                        <h2 class="text-center text-primary">{{ prediction }}</h2><br>
+                        <div class="text-center mt-4">
+                            <img src="{{ url_for('static', filename=image_path) }}" alt="Prediction Plot" class="img-fluid">
+                        </div>
                         <div class="text-center mt-4">
                             <a href="/" class="btn btn-primary">Back to Home</a>
                         </div>
